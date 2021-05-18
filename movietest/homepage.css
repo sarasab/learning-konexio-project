@@ -1,0 +1,17 @@
+
+
+  header{
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+  }
+
+.carousel {
+  
+    background: #032541;
+    background: -webkit-linear-gradient(legacy-direction(to right), #032541, 0%, #032541 100%);
+    background: -webkit-linear-gradient(linear, left top, right top,( from#032541 to#032541));
+    background: -webkit-linear-gradient(left, #032541 0%, #032541 100%);
+    background: -o-linear-gradient(left, #032541 0%, #032541 100%);
+    background: linear-gradient(to right, #032541 0%, #032541 100%);
+  }
