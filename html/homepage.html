@@ -1,50 +1,507 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>movie-project</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
-      crossorigin="anonymous"
-    />
-    
-    <link rel="stylesheet" href="../css/homepage.css"/>
-    <link rel="stylesheet" href="../js/homepage.js"/>
+<!DOCTYPE html>
+<html>
 
+<head>
+  <title>Exercice</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/homepage.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 
 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Movies</a>
-              </div>
-            </div>
-          </nav>
-        
-          <div class="container">
-            <div class="jumbotron">
-              <h3 class="text-center">Search</h3>
-              <form id="searchForm">
-                <input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
-              </form>
-            </div>
-          </div>
-        
-          <div class="container">
-            <div id="movies" class="row"></div>
-          </div>
-        
 
-    </header>
+  <!-- BLOC HEADER modifier le responsive, pour faire apparaitre le menu  -->
+  <header>
+    <!-- header boostrap-->
+    <div class="header2 bg-success-gradiant">
+      <div class="">
+        <!-- Header 1 code -->
+        <nav class="navbar navbar-expand-lg h2-nav">
+          <a class="navbar-brand" href="#">
+            <img src="../css/img/LOGO.jpg" alt="LOGO" width="90" height="60">
+          </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header2"
+            aria-controls="header2" aria-expanded="false" aria-label="Toggle navigation"> <span
+              class="icon-menu"></span> </button>
+          <div class="collapse navbar-collapse hover-dropdown" id="header2">
+            <ul class="navbar-nav">
+              <!-- Header 1 code -->
+
+              <li class="nav-item active dropdown position-relative"> <a class="nav-link dropdown-toggle" href="#"
+                  id="h2-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Movies <i
+                    class="fa fa-angle-down ml-1 font-12"></i> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                  <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                      data-toggle="dropdown" href="#">Dropdown <i
+                        class="fa fa-long-arrow-right float-right mt-1"></i></a>
+
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                      <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item" href="#"
+                          data-toggle="dropdown">Dropdown <i class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                        <ul class="nav navbar-nav dropdown-menu">
+                          <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                              href="#" data-toggle="dropdown">Dropdown <i
+                                class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">Separated link</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown position-relative"> <a class="nav-link dropdown-toggle" href="#"
+                  id="h2-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> TV Shows <i
+                    class="fa fa-angle-down ml-1 font-12"></i> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                  <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                      data-toggle="dropdown" href="#">Dropdown <i
+                        class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                      <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item" href="#"
+                          data-toggle="dropdown">Dropdown <i class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                        <ul class="nav navbar-nav dropdown-menu">
+                          <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                              href="#" data-toggle="dropdown">Dropdown <i
+                                class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">Separated link</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown position-relative"> <a class="nav-link dropdown-toggle" href="#"
+                  id="h2-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> People <i
+                    class="fa fa-angle-down ml-1 font-12"></i> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                  <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                      data-toggle="dropdown" href="#">Dropdown <i
+                        class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                      <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item" href="#"
+                          data-toggle="dropdown">Dropdown <i class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                        <ul class="nav navbar-nav dropdown-menu">
+                          <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                              href="#" data-toggle="dropdown">Dropdown <i
+                                class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">Separated link</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+
+              <li class="nav-item dropdown position-relative"> <a class="nav-link dropdown-toggle" href="#"
+                  id="h2-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More <i
+                    class="fa fa-angle-down ml-1 font-12"></i> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                  <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                      data-toggle="dropdown" href="#">Dropdown <i
+                        class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                      <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item" href="#"
+                          data-toggle="dropdown">Dropdown <i class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                        <ul class="nav navbar-nav dropdown-menu">
+                          <li class="dropdown-submenu position-relative"> <a class="dropdown-toggle dropdown-item"
+                              href="#" data-toggle="dropdown">Dropdown <i
+                                class="fa fa-long-arrow-right float-right mt-1"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">Separated link</a></li>
+                              <li class="divider" role="separator"></li>
+                              <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- End Header 1 code -->
+            </ul>
+
+            <ul class="second">
+              <li class="lacroix"><a class="nav-link" href="../html nav/index.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" color="white" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z" />
+                  </svg>
+                </a></li>
+              <li class="bubble"><a class="nav-link" href="#"><i class="icon-bubble"></i> EN</a></li>
+              <li class="nav-item active"><a class="nav-link" href="#">Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Join TMDb</a></li>
+            </ul>
+          </div>
+        </nav> <!-- End Header 1 code -->
+      </div>
+    </div>
+  </header>
+
+  <!--BLOC CAROUSEL-->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../css/img/GOZELLA.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+          <h2>Welcome.</h2>
+          <h3>Millions of movies, TV shows and people to discover. Explore now. </h3>
+          <div class="input-group mt-5">
+            <input type="text" class="form-control" placeholder="Rechercher Un film,Une émission,Télevisée,Un artiste"
+              aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class=" input-group-text" id="basic-addon2">Search</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../css/img/GOZELLA.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+          <h2>Welcome.</h2>
+          <h3>Millions of movies, TV shows and people to discover. Explore now. </h3>
+          <div class="input-group mt-5">
+            <input type="text" class="form-control" placeholder="Rechercher Un film,Une émission,Télevisée,Un artiste"
+              aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class=" input-group-text" id="basic-addon2">Search</span>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../css/img/GOZELLA.jpg" class="d-block w-100" alt="...">
+
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Welcome.</h2>
+          <h3>Millions of movies, TV shows and people to discover. Explore now. </h3>
+          <div class="input-group mt-5">
+            <input type="text" class="form-control" placeholder="Rechercher Un film,Une émission,Télevisée,Un artiste"
+              aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class=" input-group-text" id="basic-addon2">Search</span>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- BLOC POPULAR-->
+  <div class="container1">
+    <div class="bloc">
+      <h4> What's Popular </h4>
+    </div>
+    <div class="BMP">
+      <button class="btn rounded"><a href="#"><span class="text-green">Streaming</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">On tv</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">For Rent</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">In Theaters</span></button>
+    </div>
+  </div>
+  <div class="BMP1">
+  </div>
+  </div>
+
+  <!-- BLOC FREE TO WATCH-->
+  <div class="container2">
+    <div class="bloc">
+      <h4> TV ON AIR </h4>
+    </div>
+    <div class="BFW">
+      <button class="btn rounded"><a href="#"><span class="text-green">Movies</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">TV</span></button>
+    </div>
+  </div>
+  <div class="BFW1">
+  </div>
+  </div>
+
+
+  <!-- BLOC LAST TRAILER-->
+  <div class="container3">
+    <div class="bloc">
+      <h4> Latest Trailers </h4>
+    </div>
+    <div class="BLT">
+      <button class="btn rounded"><a href="#"><span class="text-green">Streaming</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">On TV</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">For Rent</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">In Theaters</span></button>
+    </div>
+  </div>
+  <div class="BLT1">
+  </div>
+  </div>
+  <!-- JOIN TODAY-->
+  <div class="join-today">
+    <div class="join">
+      <h2>Join Today</h2>
+      <h5>Get access to maintain your own custom personal lists, </br>
+        track what you've seen and search and filter for what to watch next—regardless </br>
+        if it's in theatres, on TV or available on popular streaming services like DOCSVILLE, Argo, </br>
+        WOW Presents Plus, and Magellan TV.
+      </h5>
+      <button> Sign Up</button>
+    </div>
+    <div class="today">
+      <ul>
+        <li>Enjoy TMDb ad free</li>
+        <li>Maintain a personal watchlist</li>
+        <li>Filter by your subscribed streaming services and find something to watch</li>
+        <li>Log the movies and TV shows you've seen</li>
+        <li>Build custom lists</li>
+        <li>Contribute to and improve</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BLOC TRENDING-->
+  <div class="container4">
+    <div class="bloc">
+      <h4>Trending </h4>
+    </div>
+    <div class="BT">
+      <button class="btn rounded"><a href="#"><span class="text-green">TV</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">For Rent</span></button>
+      <button class="btn rounded"><a href="#"><span class="text-green">In Theaters</span></button>
+    </div>
+
+    <div class="BT1">
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+  <!-- FOOTER à faire -->
+
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-5">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column LOGO-->
+          <div  class="col-lg-2 col-md-6 mb-4 mb-md-0">
+
+            <h5 class="text-uppercase"></h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <img id="logoid"  src="../css/img/LOGO.jpg">
+              </li>
+              
+            </div>
+          <!--Grid column-->
+         
+
+          <!--Grid column-->
+          
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">THE BASICS</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-dark">About TMDb</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Contact Us</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Support Forums</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">API</a>
+              </li>
+
+              <li>
+                <a href="#!" class="text-dark">System Status</a>
+              </li>
+
+            </ul>
+          </div>
+          <!--Grid column-->
+          
+
+          <!--Grid column-->
+          
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">GET INVOLVED</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-dark">Contribution Bible</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">3rd Party Applications</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Add New Movie</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Add New TV Show</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+
+        
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">COMMUNITY</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-dark"> Guidelines</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark"> Discussions</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Leaderboard</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark"> Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+         
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">LEGAL</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-dark">Terms of Use</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">API Terms of Use</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:DD by DD
+        <a class="text-dark" href="https://mdbootstrap.com/"></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+<!-- tous les scripts -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../js/homepage.js"></script>
+
+
+  
+
+
 
 </body>
 
