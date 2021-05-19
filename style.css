@@ -257,12 +257,19 @@ border-radius: 0.25em;
   
   
   footer{
-    background-image: url(../learning-konexio-project/background.jpg);
+   
     position: absolute;
     margin-left: 0%;
   
     width: 100%;
     background-size: cover;
+ 
+     display: flex;
+      color:whitesmoke;
+      size: 9px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  
   
   }
 
@@ -291,7 +298,9 @@ border-radius: 0.25em;
 
 .radius{
 
-border-radius: 60%;
+border-radius: 50%;
+color:#343a40;
+background-color: silver;
 
 font-family:cursive;
 line-height:'Times New Roman', Times, serif ;
@@ -330,15 +339,10 @@ iframe{
   display: flex;
   flex-wrap: wrap;
 }
-footer {
-  background-color: #032541;
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+
 #logofooter{
-  width:70%;
-  height: 70%;
+  width:50%;
+  height: 50%;
   border-radius: 50%;
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {

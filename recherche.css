@@ -1,0 +1,119 @@
+body{
+    background-image:url(../learning-konexio-project/background.jpg);
+    background-repeat: no-repeat;
+    
+    margin-left: 0%;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+  #searchTerm{
+    width: 100%;         /* Pour qu'il prenne toute la largeur du carousel */
+    z-index: 5;          /* Pour que le formulaire soit "au dessus" de l'image  */
+    /*
+    Avec position absolute, l'object est placé par rapport à
+    son ancêtre le plus proche qui a "position: relative".
+    Ici, c'est le carousel. Du coup on lui dit de se metter
+    à 50% du haut du carousel et a 20% de la gauche.
+    ¿Por qué 20?
+    */
+    position: absolute;
+    top: 70%;
+    
+    left: 20%;
+}
+
+#searchTerm input{
+    /*
+    Parce que le width de l'input est 60% est qu'on veut
+    la même marge des deux côtés, donc il reste 40% / 2
+    */
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+   
+    position: absolute;
+    margin-left: 0%;
+  
+    width: 100%;
+    background-size: cover;
+ 
+     display: flex;
+      color:whitesmoke;
+      size: 9px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  
+  
+  }
+  
+
+  /* SCROLLER a modifier*/
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:rgb(228, 226, 226); 
+  border-radius: 10px;
+}
+/* Handle on hover ::-webkit-scrollbar-thumb:hover {
+  background: #b30000;      */
+
+
+
+
+
+
+
+
+
+
+
+
+#logofooter{
+  width:   50%;
+  height: 50%;
+  border-radius: 50%;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.0rem); 
+  padding-left: var(--bs-gutter-x, .0rem);
+  margin-right: auto;
+  margin-left: auto; 
+}
+*, ::after, ::before {
+ box-sizing:border-box;
+}
