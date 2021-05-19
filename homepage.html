@@ -72,9 +72,10 @@
             <!-- Ici commence le carousel normal -->
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <!-- Aha! Ici un petit formulaire -->
-                <form id="searchTerm">
-                    <input type="text" placeholder="Rechercher un film, une serie, une actrice...">
-                </form>
+                <form id="searchTerm" method="get" action="./recherche.html">
+                    <input name="query" type="text" placeholder="Rechercher un film, une serie, une actrice...">
+                   
+                  </form>
                 <!-- Et on retourne à notre carousel normal comme si de rien n'était -->
                 <div class="carousel-inner"></div>
             </div>

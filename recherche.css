@@ -62,27 +62,12 @@ footer {
   size: 9px;
   
   
-  height: 100%;
+  height: 50%;
   width: 100%;
 }
 
-/* SCROLLER a modifier*/
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 1px grey;
-  border-radius: 10px;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(228, 226, 226);
-  border-radius: 10px;
-}
-/* Handle on hover ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;      */
+
+
 
 #logofooter {
   width: 50%;
@@ -90,21 +75,4 @@ footer {
   border-radius: 50%;
   bottom: 0%;
 }
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  width: 100%;
-  padding-right: var(--bs-gutter-x, 0rem);
-  padding-left: var(--bs-gutter-x, 0rem);
-  margin-right: auto;
-  margin-left: auto;
-}
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
+
