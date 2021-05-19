@@ -97,5 +97,55 @@ $(function () {
     },
   });
 });
+
+
 // BLOC TRAILER https://www.youtube.com/embed/567159?playlist=567159&loop=1 a regler
+
+const URL_API_MOVIE_SE = "https://api.themoviedb.org/3/movie/567189/videos?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US";
+const URL_IMAGE_PRE = "https://developers.themoviedb.org/3/movies/get-movie-videos";
+const TRAIL = "https://www.youtube.com/embed/567159?playlist=567159&loop=1";
+
+$(function () {
+
+  $.ajax({
+    url: URL_API_MOVIE_SE,
+    success: function (data) {
+      let videos = data.results;
+      videos.forEach(function (video) {
+        let videoHtmlToAdd = `<div  class="owl-carousel"  >`;
+        videoHtmlToAdd += `<div class="love">`;
+        videoHtmlToAdd += `<video src="${TRAIL}" width='320'  height="240" controls poster="vignette.jpg"> </a>
+                          </video>`
+        videoHtmlToAdd += '</div>';
+        videoHtmlToAdd += '</div>';
+        $(".BLT1").append(videoHtmlToAdd);
+        console.log(".BLT1");
+
+      });
+    },
+  });
+});
+
+
+
+const url =
+'https://api.themoviedb.org/3/movie/popular?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US&page=1';
+const URL_img = 'https://image.tmdb.org/t/p/w500';
+$(document).ready(function () {
+$.ajax({
+  url: url,
+  success: function (data) {
+    console.log(data.results);
+    const randomIndex = Math.floor(Math.random() * (data.results.length - 0) + 0);
+    console.log(randomIndex);
+    const randomBackdrop = data.results[randomIndex].backdrop_path;
+    const movies=data.results
+    movies.forEach(function (movie) {
+      let movieHtml = '<div id=carousel>';
+      movieHtml += `<img src="${URL_img + randomBackdrop}">`;
+      $('#bloc1').append(movieHtml);
+    });
+  },
+});
+});
 
