@@ -29,7 +29,7 @@ $(document).ready(function () {
 // BLOC BMP1 POPuLAR MOVIES
 const urlPopular=
   'https://api.themoviedb.org/3/movie/popular?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US&page=1';
-
+  const URL_imgs = 'https://image.tmdb.org/t/p/w200';
 $(document).ready(function () {
   $.ajax({
     url:urlPopular,
@@ -38,8 +38,8 @@ $(document).ready(function () {
       console.log(movies);
       movies.forEach(function (movie) {
         let movieHtml = '<div id=carousel>';
-        movieHtml += `<img src="${URL_img + randomBackdrop}">`;
-        $('.bmp1').append(carouselItem);
+        movieHtml += `<img src="${URL_imgs}">`;
+        $('.bmp1').append( movieHtml);
       });
     },
   });

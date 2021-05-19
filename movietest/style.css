@@ -154,7 +154,26 @@ padding-top: 1.5%;
     margin: 0px 20px 10px 20px;
     overflow: hidden;
   }
-  
+  .bmp1{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    
+     width: 100%;
+      max-width: var(--maxPrimaryPageWidth);
+      min-height: 355px;
+      overflow-x: scroll;
+      overflow-y:scroll;
+  }
+
+  .bmp1>div>img{
+border-radius: 0.25em;
+  }
+
   .bmp1, .bfw1, .blt1, .bt1{   
   
     display:flex;
@@ -190,6 +209,8 @@ padding-top: 1.5%;
     text-align: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
+
+  
 
   .popular-img{
   
@@ -315,7 +336,7 @@ line-height:'Times New Roman', Times, serif ;
   
 }
 
-iframe {
+iframe{
   height: 250px;
   border: 2px solid black;
   width: 100%;

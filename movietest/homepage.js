@@ -29,7 +29,7 @@ $(document).ready(function () {
 // BLOC BMP1 POPuLAR MOVIES
 const urlPopular=
   'https://api.themoviedb.org/3/movie/popular?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US&page=1';
-
+  const URL_imgs = 'https://image.tmdb.org/t/p/w200';
 $(document).ready(function () {
   $.ajax({
     url:urlPopular,
@@ -37,9 +37,11 @@ $(document).ready(function () {
       const movies = data.results;
       console.log(movies);
       movies.forEach(function (movie) {
-        let movieHtml = '<div id=carousel>';
-        movieHtml += `<img src="${URL_img + randomBackdrop}">`;
-        $('.bmp1').append(carouselItem);
+        let movieHtml = '<div class="m-3">';
+        movieHtml += `<img src="${URL_imgs
+        +movie.poster_path}">`;
+        movieHtml+=`<h5>${movie.original_title}</h5>`
+        $('.bmp1').append( movieHtml);
       });
     },
   });
@@ -61,7 +63,7 @@ $(function () {
         movieHtmlToAdd += `<img  class="m-3 rounded" style="width:180px" src="${
           URL_IMAGE_PREF + TV.poster_path
         }">`;
-        movieHtmlToAdd += `<h5 style="text-align:center" > <a href="m.html?filmId=${TV.id}">${TV.name}></a> </h5>`;
+        movieHtmlToAdd += `<h5 style="text-align:center" > <a href="m.html?filmId=${TV.id}">${TV.name}</a> </h5>`;
         movieHtmlToAdd +=
           "<h6 style ='text-align:center'> " + TV.first_air_date + '</h6>';
         movieHtmlToAdd += '</div>';
@@ -89,7 +91,7 @@ $(function () {
         }">`;
         movieHtmlToAdd +=
           "<button class ='radius'> " + movie.vote_average + '</button>';
-        movieHtmlToAdd += `<h5 style="text-align:center" > <a href="./film.html?filmId=${movie.id}">${movie.original_title}></a> </h5>`;
+        movieHtmlToAdd += `<h5 style="text-align:center" > <a href="./film.html?filmId=${movie.id}">${movie.original_title}</a> </h5>`;
         movieHtmlToAdd += '</div>';
         movieHtmlToAdd += '</div>';
         $('.bt1').append(movieHtmlToAdd);
