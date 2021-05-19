@@ -7,6 +7,14 @@ body{
     width: 100%;
     background-size: cover;
   }
+  .bg-dark {
+    background-color: #000c1700!important;
+}
+#logo{
+  width:30%;
+  height: 30%;
+  border-radius: 50%;
+}
 
 /*
 L'id du carousel, la div tout autour avec les classes
@@ -260,22 +268,21 @@ border-radius: 0.25em;
    
   
   
-  footer{
-   
-    position: absolute;
-    margin-left: 0%;
-  
-    width: 100%;
-    background-size: cover;
- 
-     display: flex;
-      color:whitesmoke;
-      size: 9px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-  
-  
-  }
+ footer {
+  margin-bottom: 0%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  color: whitesmoke;
+  size: 9px;
+  height: 35%;
+  width: 100%;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
   
 
@@ -286,7 +293,7 @@ border-radius: 0.25em;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 1px grey; 
+  
   border-radius: 10px;
 }
 /* Handle */

@@ -82,7 +82,7 @@ $(function () {
   $.ajax({
     url: urlWithQuery,
     success: function (data) {
-      let movies = data.results; // results est un array
+      let movies = data.results; 
       movies.forEach(function (movie) {
         let movieHtmlToAdd = `<div  class="owl-carousel"  >`;
         movieHtmlToAdd += `<div class="love">`;
@@ -99,5 +99,5 @@ $(function () {
     },
   });
 });
-// BLOC TRAILER https://www.youtube.com/embed/567159?playlist=567159&loop=1 a regler
+
 

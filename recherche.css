@@ -7,6 +7,9 @@ body {
   width: 100%;
   background-size: cover;
 }
+.bg-dark {
+  background-color: #000c1787!important;
+}
 /*
 L'id du carousel, la div tout autour avec les classes
 'carousel slide'
@@ -60,19 +63,29 @@ footer {
   display: flex;
   color: whitesmoke;
   size: 9px;
-  
-  
-  height: 50%;
+  height: 35%;
   width: 100%;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
-
+#logo{
+  width:30%;
+  height: 30%;
+  border-radius: 50%;
+}
 
 
 #logofooter {
   width: 50%;
-  height: 50%;
-  border-radius: 50%;
+  
+  border-radius: 70%;
   bottom: 0%;
 }
 
+.img-poster {
+  width: 150px;
+}
