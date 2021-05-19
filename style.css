@@ -1,5 +1,5 @@
 body{
-    background-image:url(../movietest/background.jpg);
+    background-image:url(../learning-konexio-project/background.jpg);
     
     position: absolute;
     margin-left: 0%;
@@ -251,37 +251,19 @@ border-radius: 0.25em;
   
   }
   
-  .join-today{
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 30px;
-    padding-top: 1.25rem;
-    background-repeat: no-repeat;
-    background-image: url(../css/img/Bthw8l.jpg);
-    background-size: 100%;
-    background-color:purple ;
-    align-items: baseline;
-    color: rgb(255, 255, 255);
-    text-align: left;
-    background-color:#032541;
-
-    }
   
-    .join{
-      padding-left: 5%;
-      padding-right: 3%;
-      
-    }
   
-    .today{
-  padding-top: 8% ;
-    }
+   
+  
   
   footer{
-    background-color: black;
+    background-image: url(../learning-konexio-project/background.jpg);
+    position: absolute;
+    margin-left: 0%;
+  
+    width: 100%;
+    background-size: cover;
+  
   }
 
   
@@ -310,7 +292,7 @@ border-radius: 0.25em;
 .radius{
 
 border-radius: 60%;
-background-image: linear-gradient(to bottom,rgb(10, 171, 245), rgb(255, 230, 0));
+
 font-family:cursive;
 line-height:'Times New Roman', Times, serif ;
 
@@ -343,4 +325,29 @@ iframe{
   margin-left: 3%;
   flex-direction: row;
   justify-content: space-between;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer {
+  background-color: #032541;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#logofooter{
+  width:70%;
+  height: 70%;
+  border-radius: 50%;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.0rem); 
+  padding-left: var(--bs-gutter-x, .0rem);
+  margin-right: auto;
+  margin-left: auto; 
+}
+*, ::after, ::before {
+ box-sizing:border-box;
 }
