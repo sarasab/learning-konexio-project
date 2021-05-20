@@ -94,7 +94,7 @@ $(function () {
         movieHtmlToAdd += `<h5 style="text-align:center" > <a href="./film.html?filmId=${movie.id}">${movie.original_title}</a> </h5>`;
         movieHtmlToAdd += '</div>';
         movieHtmlToAdd += '</div>';
-        $('.bt1').append(movieHtmlToAdd);
+        $('.image').append(movieHtmlToAdd);
       });
     },
   });

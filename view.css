@@ -1,0 +1,53 @@
+body{
+  font-style:normal;
+}
+
+.bloc1, .bloc2{
+  display: flex;
+}
+
+/* css de la section bloc1*/
+
+.genres{
+  display: flex;
+  
+}
+h5{
+ margin-right: 1%;
+
+}
+.film2{
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+
+}
+
+.film4{
+  display: flex;
+   align-items: baseline;
+flex-direction: row;
+
+}
+
+ /* css de la div poster*/
+
+ #images{
+   display: flex;
+
+ }
+ #pictures{
+width: 200px;
+height: 350px;
+border-radius: 10%;
+padding:4%;
+
+ }
+
+ .informations{
+  color: white;
+  padding: 5% ;
+}
+
+
+
