@@ -35,7 +35,7 @@ $(document).ready(function () {
   const query = (new URL(document.location.toString())).searchParams.get('query')
   let url = `${URL_API_MOVIE_SEARCH}?api_key=${URL_API_KEY}&query=${query}`;
   $.ajax({
-    type: get,
+    type: "GET",
     url: url,
     success: function (data) {
       let movies = data.results; 
