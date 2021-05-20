@@ -14,46 +14,21 @@ body {
 L'id du carousel, la div tout autour avec les classes
 'carousel slide'
 */
-#carouselExampleControls{
+.carousel-inner{
   position: relative;
+  
+  border-radius: 50px;
+ 
+  
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-right: 3%;
+
 }
 
-/*
-L'id de notre formulaire
-*/
-#searchTerm{
-  width: 100%;         /* Pour qu'il prenne toute la largeur du carousel */
-  z-index: 9;          /* Pour que le formulaire soit "au dessus" de l'image  */
-  /*
-  Avec position absolute, l'object est placé par rapport à
-  son ancêtre le plus proche qui a "position: relative".
-  Ici, c'est le carousel. Du coup on lui dit de se metter
-  à 50% du haut du carousel et a 20% de la gauche.
-  ¿Por qué 20?
-  */
-  position: absolute;
-  top: 80%;
-  left: 20%;
-}
 
-#searchTerm input{
-  /*
-  Parce que le width de l'input est 60% est qu'on veut
-  la même marge des deux côtés, donc il reste 40% / 2
-  */
-  width: 60%;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-}
 
-/*
-Pour éviter la bordure quand l'input est sélectionné, pas
-obligatoire
-*/
-#searchTerm input:focus{
-  outline: none;
-}
+
 
 
 footer {
@@ -70,6 +45,7 @@ footer {
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
+  background-color: #000c1798;
 }
 
 #logo{
@@ -84,28 +60,31 @@ footer {
   
   border-radius: 70%;
   bottom: 0%;
-}
-
-.img {
-  object-fit: cover;
-   width: 100%;
-   height: 100%;
-   justify-content: space-around;
-   flex-direction: column;
-   margin-block-start: 0%;
-   position: absolute;
-   float: left;
-   
 
 }
+
+.img{
+  position: relative;
+  border-radius: 50px;
+  margin-left: 2%;
+  margin-right: 2%;
+
+  vertical-align:inherit;
+
+
+}
+
 a{
   color:goldenrod;
   margin: 4%;
+  display: flex;
 }
 
 
 p{
   color: rgb(202, 197, 197);
   margin: 5%;
+  
  
 }
+
