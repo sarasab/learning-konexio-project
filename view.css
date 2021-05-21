@@ -26,6 +26,9 @@ body{
 .topBilledCast{
 
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y:hidden ;
   padding-top: 0.5%;
   padding-bottom:  2%;
   align-content: space-between;
@@ -73,13 +76,27 @@ padding:4%;
   padding: 5% ;
 }
 
-.blt, .bt1, .bfw1{
+.blt, .bt1{
   
   display: flex;
   align-content:row ;
-  width:380%;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y:hidden ;
   
 }
+/**/
+
+.bfw1{
+  
+  display: flex;
+  align-content:row ;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y:hidden ;
+  
+}
+
 .blt{
   padding:2%;
   background-color: white;
@@ -95,9 +112,10 @@ iframe{
 }
 
 .recom{
-padding-top: 2%;
 
-
+ display: flex;
+ 
+  padding-top: 2%;
 }
 
 /* CSS BOUTONS DU SITE */
@@ -164,10 +182,7 @@ a:link,a:hover,a:active,a:visited{
 
 /**SUPERPOSER DEUX DIV*/
 
-.bloc3{
- 
 
-    }
 
 .enfant2{
   background: white;
