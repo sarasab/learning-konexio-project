@@ -1,6 +1,7 @@
 const url =
   'https://api.themoviedb.org/3/movie/popular?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US&page=1';
 const URL_img = 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/';
+//ici carousel//
 $(document).ready(function () {
   $.ajax({
     url: url,
@@ -37,7 +38,11 @@ $(document).ready(function () {
       const movies = data.results;
       console.log(movies);
       movies.forEach(function (movie) {
+        if(movie.original_title===undefined){
+          return;
+        }
         let movieHtml = '<div class="m-3">';
+
         movieHtml += `<img src="${URL_imgs
         +movie.poster_path}">`;
         movieHtml+=`<h5>${movie.original_title}</h5>`
@@ -58,6 +63,9 @@ $(function () {
     success: function (data) {
       let TVS = data.results; // results est un array
       TVS.forEach(function (TV) {
+        if(TV.name===undefined){
+          return;
+        }
         let movieHtmlToAdd = `<div  class="owl-carousel">`;
         movieHtmlToAdd += `<div class="love">`;
         movieHtmlToAdd += `<img  class="m-3 rounded" style="width:180px" src="${
@@ -84,6 +92,9 @@ $(function () {
     success: function (data) {
       let movies = data.results; 
       movies.forEach(function (movie) {
+        if(movie.original_title===undefined){
+          return;
+        }
         let movieHtmlToAdd = `<div  class="owl-carousel"  >`;
         movieHtmlToAdd += `<div class="love">`;
         movieHtmlToAdd += `<img  class="m-3 rounded" style="width:180px" src="${
