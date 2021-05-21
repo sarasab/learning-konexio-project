@@ -25,7 +25,17 @@ $(function () {
       $('.runtime').html(`${movie.runtime}`)  
       $('.tagline').html(`${movie.tagline}`)   
       $('.overview').html(`${movie.overview}`)     
-      $('.homepage').html(`${movie.homepage}`)  
+      $('.homepage').html(`${movie.homepage}`) 
+      
+      $('.original_title').html(`${ movie.original_title}`)
+      $('.status').html(`${ movie.status}`)
+      $('.original_language').html(`${movie.original_language}`)  
+      $('.budget').html(`${movie.budget}`)   
+      $('.revenue').html(`${movie.revenue}`)     
+      
+      
+
+
       
     },
   });
@@ -106,11 +116,88 @@ $(function () {
       const movies = data.cast;//RECHERCHE DE CAST
         movies.forEach(function (movie) {
         let movieHtml = '<div class="cast">';
-        movieHtml+= `<img src="${URL_imgs + movie.name }">`;
-        movieHtml+=`<h5>${movie.known_for_department}</h5>`;
+        movieHtml+= `<img class="m-3 rounded"  style="width:180px" src="${URL_imgs + movie.profile_path}">`;
+       // &nbsp = correspond à l'espace en jquery//
+        movieHtml+= `<h6 style="text-align:center">${ movie.name}</h6>`
+        movieHtml+=`<h6 style="text-align:center" >${movie.known_for_department}</h6>`
+        movieHtml+= `</div>`;
+
         $('.topBilledCast').append( movieHtml);
       });
     },
   });
 });
+
+// BLOC TRENDING MOVIES
+const URL_API_MOVIE = "https://api.themoviedb.org/3/trending/all/day?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
+const URL_I = "https://image.tmdb.org/t/p/w200";
+$(function () {
+  let urlWithQuery = `${URL_API_MOVIE}`;
+  $.ajax({
+    url: urlWithQuery,
+    success: function (data) {
+      let movies = data.results; // results est un array
+      movies.forEach(function (movie) {
+        let movieHtmlToAdd = `<div  class="owl-carousel"  >`;
+        movieHtmlToAdd += `<div class="love">`;
+        movieHtmlToAdd += `<img  class="m-3 rounded" style="width:180px" src="${URL_I + movie.poster_path}">`;
+          movieHtmlToAdd += `<h6 style="text-align:center" > <a href="./film.html?filmId=${movie.id}">${movie.original_title}</a> </h6>`;
+        movieHtmlToAdd += '</div>';
+        movieHtmlToAdd += '</div>';
+
+        $(".bt1").append(movieHtmlToAdd);
+      });
+    },
+  });
+});
+
+// BLOC TV ON AIR
+const URL_API_MOVI= "https://api.themoviedb.org/3/tv/on_the_air?api_key=b8e16ff25f44004fe2ab5dedc9e0453e&language=en-US&page=1";
+const URL_ = "https://image.tmdb.org/t/p/w200";
+
+$(function () {
+
+  $.ajax({
+    url: URL_API_MOVI,
+    success: function (data) {
+      let TVS = data.results; // results est un array
+
+      TVS.forEach(function (TV) {
+        let movieHtmlToAdd = `<div  class="owl-carousel">`;
+        movieHtmlToAdd += `<div class="love">`;
+        movieHtmlToAdd += `<img  class="m-3 rounded" style="width:180px" src="${URL_ + TV.poster_path}">`;
+        movieHtmlToAdd += `<h6 style="text-align:center" > <a href="m.html?filmId=${TV.id}">${TV.name}</a> </h6>`;
+        movieHtmlToAdd += '</div>';
+        movieHtmlToAdd += '</div>';
+        $(".bfw1").append(movieHtmlToAdd);
+      });
+    },
+  });
+})
+
+
+// BLOC REVIEWS
+const URL_API_MOV= "https://api.themoviedb.org/3/movie/520663/reviews?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US&page=1";
+const AVIS = "https://image.tmdb.org/t/p/w200";
+
+$(function () {
+
+  $.ajax({
+    url: URL_API_MOV,
+    success: function (data) {
+      let TVS = data.results; // results est un array
+
+      TVS.forEach(function (TV) {
+        let movieHtmlToAdd = `<div  class="owl-carousel">`;
+        movieHtmlToAdd += `<div class="love">`;
+        movieHtmlToAdd += `<h5 style="text-align:center" > <a href="m.html?filmId= ${TV.results}</a> </h5>`;
+        movieHtmlToAdd += '</div>';
+        movieHtmlToAdd += '</div>';
+        $(".reviews").append(movieHtmlToAdd);
+      });
+    },
+  });
+})
+
+
 

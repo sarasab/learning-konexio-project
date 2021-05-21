@@ -1,8 +1,19 @@
 body{
   font-style:normal;
+  background-color: rgb(38, 38, 77);
+  color: white;
+ }
+
+  
+
+
+/* pour modifier a couleur les tonalité d'une image*/
+.poster {
+  background-color:linear-gradient(grey, #333);
+  
 }
 
-.bloc1, .bloc2{
+.bloc1 {
   display: flex;
 }
 
@@ -12,6 +23,16 @@ body{
   display: flex;
   
 }
+.topBilledCast{
+
+  display: flex;
+  padding-top: 0.5%;
+  padding-bottom:  2%;
+  align-content: space-between;
+
+}
+
+
 h5{
  margin-right: 1%;
 
@@ -34,6 +55,9 @@ flex-direction: row;
 
  #images{
    display: flex;
+   background-color:linear-gradient(grey, #333);
+
+  padding-right: 10%;
 
  }
  #pictures{
@@ -49,5 +73,120 @@ padding:4%;
   padding: 5% ;
 }
 
+.blt, .bt1, .bfw1{
+  
+  display: flex;
+  align-content:row ;
+  width:380%;
+  
+}
+.blt{
+  padding:2%;
+  background-color: white;
+}
+
+iframe{
+  
+  border: 2px solid black;
+  margin-left: 0.4%;
+  flex-direction: row;
+  border-radius: 1%;
+  justify-content: space-between;
+}
+
+.recom{
+padding-top: 2%;
 
 
+}
+
+/* CSS BOUTONS DU SITE */
+
+.BMP{
+
+  margin-right: 2%;
+}
+
+.btn {
+  margin: 10px auto;
+  border: none;
+  padding: 5px 44px;
+  font-size: 14px;
+  position: relative;
+}
+
+.btn::before {
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn .btn-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.btn:hover::before {
+  background: black;
+  width: 100%;
+}
+
+.btn.rounded {
+  border-radius: 50px;
+}
+
+.btn.rounded .text-green {
+  color: #00F0B5;
+  mix-blend-mode: difference;
+}
+
+.btn.rounded::before {
+  border-radius: 50px;
+  width: 50%;
+  background: #00F0B5;
+  margin-left: 2%;
+}
+
+.btn.rounded:hover::before {
+  background: #00F0B5;
+  width: 100%;
+}
+/*ENLEVER LES TEXTES DECORATIONS*/
+a:link,a:hover,a:active,a:visited{
+  text-decoration:none;
+  color: white;
+}
+
+/**SUPERPOSER DEUX DIV*/
+
+.bloc3{
+ 
+
+    }
+
+.enfant2{
+  background: white;
+  max-width: 20%;
+  max-height: 300%;
+  color: grey;
+  border-radius: 3%;
+  font-size: 28px;
+  
+}
+
+.recommandations{
+
+ background-color:  rgb(38, 38, 77);
+ color: white;
+
+}
+
+footer{
+  padding-top: 10%;
+  
+}
