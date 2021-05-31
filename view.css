@@ -1,11 +1,11 @@
 body{
   font-style:normal;
-  background-color: rgb(38, 38, 77);
-  color: white;
+  background-color: white;
+  color:black;
+ font-size: 1rem;
+ font-family: 'Source Sans Pro', Arial, sans-serif;
+
  }
-
-  
-
 
 /* pour modifier a couleur les tonalité d'une image*/
 .poster {
@@ -15,7 +15,15 @@ body{
 
 .bloc1 {
   display: flex;
-}
+  
+ 
+ }
+
+ .bloc3{
+   color: black;
+   font-size: 5%;
+ }
+
 
 /* css de la section bloc1*/
 
@@ -35,21 +43,40 @@ body{
 
 }
 
-
 h5{
  margin-right: 1%;
+ padding-top: 3rem;
 
+}
+
+h6{
+  font-size: 14px;
+  padding: 0.1rem;
+}
+
+.red{
+
+  display: flex;
+  color:black;
+  padding-top: 0.3rem;
+  padding-bottom: 3rem;
+}
+
+p{
+  font-size: 16px;
+  padding-bottom: 1.5rem;
+  font-variant-caps: small-caps;
+  font-size: bold;
 }
 .film2{
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-
 }
 
-.film4{
+.productionRow{
   display: flex;
-   align-items: baseline;
+  align-items: baseline;
 flex-direction: row;
 
 }
@@ -73,7 +100,7 @@ padding:4%;
 
  .informations{
   color: white;
-  padding: 5% ;
+  padding: 1% ;
 }
 
 .blt, .bt1{
@@ -94,12 +121,16 @@ padding:4%;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y:hidden ;
+
   
 }
 
 .blt{
   padding:2%;
-  background-color: white;
+}
+.ytp-cued-thumbnail-overlay-image{
+
+  border-radius: 2rem;
 }
 
 iframe{
@@ -123,6 +154,8 @@ iframe{
 .BMP{
 
   margin-right: 2%;
+ 
+ 
 }
 
 .btn {
@@ -161,6 +194,8 @@ iframe{
 .btn.rounded .text-green {
   color: #00F0B5;
   mix-blend-mode: difference;
+  font-size: 18px;
+
 }
 
 .btn.rounded::before {
@@ -182,26 +217,77 @@ a:link,a:hover,a:active,a:visited{
 
 /**SUPERPOSER DEUX DIV*/
 
-
-
 .enfant2{
   background: white;
   max-width: 20%;
   max-height: 300%;
-  color: grey;
-  border-radius: 3%;
+  color:grey;
   font-size: 28px;
-  
+  box-shadow: -10px 0px 3px 0px rgb(225, 220, 220); 
+  background-color:white;
+  border: 2px solid rgb(233, 228, 228);
+  box-shadow: 0 0 5px 5px rgb(233, 228, 228);
+  border-radius: 10px;
+}
+
+#red{
+width: 5rem;
+
 }
 
 .recommandations{
 
- background-color:  rgb(38, 38, 77);
+ background-color:  white;
  color: white;
+ border-radius: 2%;
+ padding:3rem;
+ box-shadow: -10px 0px 3px 0px rgb(225, 220, 220); 
+ background-image: url("../learning-konexio-project/Bthw8l\ \(1\).jpg");
+ background-color: rgb(38, 38, 77);
+ border: 2px solid rgb(233, 228, 228);
+ box-shadow: 0 0 5px 5px rgb(233, 228, 228);
+ border-radius: 10px;
 
+ 
+ }
+
+ .cotegauche1{
+  box-shadow: -10px 0px 3px 0px rgb(225, 220, 220); 
+  background-color:white;
+  border: 2px solid rgb(233, 228, 228);
+  box-shadow: 0 0 5px 5px rgb(233, 228, 228);
+  border-radius: 10px;
+ }
+ .cotegauche2{
+  box-shadow: -10px 0px 3px 0px rgb(225, 220, 220); 
+  background-color: rgb(38, 38, 77);
+  border: 2px solid rgb(233, 228, 228);
+  box-shadow: 0 0 5px 5px rgb(233, 228, 228);
+  border-radius: 10px;
+ }
+
+ .cotegauche3{
+  box-shadow: -10px 0px 3px 0px rgb(225, 220, 220); 
+  background-color:white;
+  border: 2px solid rgb(233, 228, 228);
+  box-shadow: 0 0 5px 5px rgb(233, 228, 228);
+  border-radius: 10px;
+ }
+
+.container{
+ 
+  background-color: white;
+  padding:3rem;
 }
-
-footer{
-  padding-top: 10%;
+.enfant2{
+  color:white;
+  padding-top: 4.5%;
   
-}
+ };
+
+ 
+footer{
+  padding-top: 10rem;
+
+};
+

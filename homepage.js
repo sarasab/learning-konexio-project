@@ -63,7 +63,7 @@ $(function () {
         movieHtmlToAdd += `<img  class="m-3 rounded" style="width:180px" src="${
           URL_IMAGE_PREF + TV.poster_path
         }">`;
-        movieHtmlToAdd += `<h5 style="text-align:center" > <a href="m.html?filmId=${TV.id}">${TV.name}</a> </h5>`;
+        movieHtmlToAdd += `<h5 style="text-align:center" > <a href="m.html?filmId=${TV.id}">${TV.name}</a> </h5>`;//revoir le lien m sinon mettre le bon 
         movieHtmlToAdd +=
           "<h6 style ='text-align:center'> " + TV.first_air_date + '</h6>';
         movieHtmlToAdd += '</div>';

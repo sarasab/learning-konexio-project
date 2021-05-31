@@ -10,7 +10,9 @@
 
 // REQUETE ENTIERE DU SITE WEB//ETAPE1 DEFINIR LA FONCTION POUR APPELER LE FILM
 const query = (new URL(document.location.toString())).searchParams.get('query') //FONCTION DEMANDE QUERY DANS CE CAS c'est L'ID
-const URL_API_MOVIE_SEARCH =`https://api.themoviedb.org/3//movie/${query}?api_key=b8e16ff25f44004fe2ab5dedc9e0453e`;
+const URL_API_MOVIE_SEARCH ="https://api.themoviedb.org/3//movie/520663?api_key=b8e16ff25f44004fe2ab5dedc9e0453e"
+
+//const URL_API_MOVIE_SEARCH =`https://api.themoviedb.org/3//movie/${query}?api_key=b8e16ff25f44004fe2ab5dedc9e0453e`;
 const URL_IMAGE = "https://image.tmdb.org/t/p/w1280";
 $(function () {
   let urlWithQuery = `${URL_API_MOVIE_SEARCH}`;
@@ -32,30 +34,21 @@ $(function () {
       $('.original_language').html(`${movie.original_language}`)
       $('.budget').html(`${movie.budget}`)
       $('.revenue').html(`${movie.revenue}`)
-    },
-  });
-});
 
-// EXTRACTION CATEGORIES FILMS
-const URL_API_MOVIE_SEARC = "https://api.themoviedb.org/3//movie/520663?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
-const URL_IMAG = "https://image.tmdb.org/t/p/w500";
-$(function () {
-  let urlWithQuery = `${URL_API_MOVIE_SEARC}`;
-  $.ajax({
-    url: urlWithQuery,
-    success: function (data) {
-      let movies = data.genres; //RECHERCHE MULTIPLE DE L'ARRAY( &nbsp; = espace)
-      movies.forEach(function (movie) {
-        let movieHtmlToAdd = `<div  class="owl-carousel"  >`;
-        movieHtmlToAdd += `<div class="love">`;
-        movieHtmlToAdd += `<h5 style="display:inline">${"&nbsp;" + movie.name + "&nbsp;"}</h5>`;
-        movieHtmlToAdd += '</div>';
-        movieHtmlToAdd += '</div>';
-        $('.genres').append(movieHtmlToAdd);
-      });
-    },
+    
+    }
   });
 });
+//REVIEWS
+
+ //https://api.themoviedb.org/3/movie/520663/reviews?api_key=b8e16ff25f44004fe2ab5dedc9e0453e
+
+
+//if( reviews.total_result===0) {
+//$(cotegauche2).hide()
+  
+//}
+
 
 // EXTRACTION NAME
 const URL_API_MOVIE_SEAR = "https://api.themoviedb.org/3//movie/520663?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
@@ -72,7 +65,7 @@ $(function () {
         movieHtmlToAdd += `<h5 id="prod"style="font-size:12px">${movie.name}</h5>`;
         movieHtmlToAdd += '</div>';
         movieHtmlToAdd += '</div>';
-        $('.production').append(movieHtmlToAdd);
+        $('.productionRow').append(movieHtmlToAdd);
       });
     },
   });
@@ -103,6 +96,8 @@ $(function () {
 //EXTRACTIONS BILLED
 const URL_CAST = "https://api.themoviedb.org/3/movie/520663/credits?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US"
 const URL_imgs = 'https://image.tmdb.org/t/p/w200';
+let test=".topBilledCast"
+let essai=".cotegauche2";
 $(function () {
   let url = `${URL_CAST}`;
   $.ajax({
@@ -117,11 +112,25 @@ $(function () {
         movieHtml += `<h6 style="text-align:center" >${movie.known_for_department}</h6>`
         movieHtml += `</div>`;
 
-        $('.topBilledCast').append(movieHtml);
+
+
+        // if( ('.topBilledCast').is(':empty'))  {
+        if( test.val() != 0 )  {
+          $('.topBilledCast').append(movieHtml);
+          
+      }
+  
+     else{
+      $(essai).hide()
+          console.log("topBilledCast")
+     };
+      
       });
     },
   });
 });
+
+
 
 // BLOC TRENDING MOVIES
 const URL_API_MOVIE = "https://api.themoviedb.org/3/trending/all/day?api_key=b8e16ff25f44004fe2ab5dedc9e0453e";
