@@ -39,15 +39,40 @@ $(function () {
     }
   });
 });
+
+
 //REVIEWS
 
- //https://api.themoviedb.org/3/movie/520663/reviews?api_key=b8e16ff25f44004fe2ab5dedc9e0453e
+const query1 = (new URL(document.location.toString())).searchParams.get('query')
+const URL_API_MOVIE_SEARCH1 = "https://api.themoviedb.org/3/movie/520663/reviews?api_key=b8e16ff25f44004fe2ab5dedc9e0453e"
+//const URL_API_MOVIE_SEARCH1 = "https://api.themoviedb.org/3/movie/${query}/reviews?api_key=b8e16ff25f44004fe2ab5dedc9e0453e"
 
 
-//if( reviews.total_result===0) {
-//$(cotegauche2).hide()
-  
-//}
+$(function () {
+  let url = `${URL_API_MOVIE_SEARCH1}`;
+  $.ajax({
+    url: url,
+    success: function (data) {
+      let movies = data.results;
+      movies.forEach(function (movie) {
+        let movieHtmlToAdd = `<div  class="owl-carousel">`;
+        movieHtmlToAdd += `<div class="love">`;
+        movieHtmlToAdd += `<h6  id= "reviews"style = 'color:white'>${movie.content}</h6>`;
+        movieHtmlToAdd += '</div>';
+        movieHtmlToAdd += '</div>';
+        $('.revueby').append(movieHtmlToAdd);
+
+        if( reviews.total_result===0) {
+          $(cotegauche2).hide()
+            
+          }
+
+      });
+    },
+  });
+});
+
+
 
 
 // EXTRACTION NAME
@@ -96,8 +121,6 @@ $(function () {
 //EXTRACTIONS BILLED
 const URL_CAST = "https://api.themoviedb.org/3/movie/520663/credits?api_key=b634f31bce06a1625850e6a8c9231f70&language=en-US"
 const URL_imgs = 'https://image.tmdb.org/t/p/w200';
-let test=".topBilledCast"
-let essai=".cotegauche2";
 $(function () {
   let url = `${URL_CAST}`;
   $.ajax({
@@ -111,20 +134,7 @@ $(function () {
         movieHtml += `<h6 style="text-align:center">${movie.name}</h6>`
         movieHtml += `<h6 style="text-align:center" >${movie.known_for_department}</h6>`
         movieHtml += `</div>`;
-
-
-
-        // if( ('.topBilledCast').is(':empty'))  {
-        if( test.val() != 0 )  {
-          $('.topBilledCast').append(movieHtml);
-          
-      }
-  
-     else{
-      $(essai).hide()
-          console.log("topBilledCast")
-     };
-      
+         $('.topBilledCast').append(movieHtml);
       });
     },
   });
